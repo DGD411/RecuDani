@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Header -->
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/scooter_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My Scooter - F 123"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="December 8, 2022"
+                android:textColor="#AAAAAA"
+                android:layout_below="@id/scooter_name" />
+
+            <ImageView
+                android:id="@+id/user_image"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_user_foreground"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="8dp" />
+        </RelativeLayout>
+
+        <!-- Search bar -->
+        <EditText
+            android:id="@+id/search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@id/header"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/search_bar_background"
+            android:hint="Search"
+            android:padding="10dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#AAAAAA" />
+
+        <!-- Battery percentage and scooter image -->
+        <RelativeLayout
+            android:id="@+id/battery_scooter_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/search_bar"
+            android:layout_margin="16dp"
+            android:background="#1E1E1E"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/battery_percentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="60%"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/scooter_image"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_below="@id/battery_percentage"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/ic_scooter"
+                android:scaleType="centerInside"
+                android:background="@drawable/image_border" />
+        </RelativeLayout>
+
+        <!-- Buttons section -->
+        <LinearLayout
+            android:id="@+id/button_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/battery_scooter_section"
+            android:orientation="horizontal"
+            android:layout_margin="16dp"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/bluetooth_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Bluetooth"
+                android:backgroundTint="#1E1E1E"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/locate_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Locate"
+                android:backgroundTint="#1E1E1E"
+                android:textColor="#FFFFFF"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <!-- Map and route logs -->
+        <RelativeLayout
+            android:id="@+id/map_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/button_section"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="#1E1E1E"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20.5 km"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/street_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/location"
+                android:text="Beacon Street"
+                android:textColor="#AAAAAA" />
+
+            <ImageView
+                android:id="@+id/map_image"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_below="@id/street_name"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/image_border"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_map" />
+        </RelativeLayout>
+
+        <!-- Route logs -->
+        <TextView
+            android:id="@+id/route_logs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/map_section"
+            android:padding="16dp"
+            android:text="Route Logs"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/route_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/route_logs"
+            android:layout_margin="16dp"
+            android:text="2875 Avenue, Montreal • 23 mins • 5.5 km"
+            android:textColor="#AAAAAA" />
+
+    </RelativeLayout>
+</ScrollView>

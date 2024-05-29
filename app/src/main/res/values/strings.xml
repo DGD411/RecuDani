@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">RecuDani</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="scooter_name">My Scooter - F 123</string>
+    <string name="status">Bluetooth, Active</string>
+    <string name="battery_percentage">60%</string>
+    <string name="light_up">Light it up</string>
+    <string name="play_sound">Play Sound</string>
+    <string name="location_distance">740 m</string>
+    <string name="street_name">Beacon Street</string>
+    <string name="travel_time">20 min</string>
+</resources>

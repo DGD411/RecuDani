@@ -1,0 +1,101 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MapFragment">
+
+    <org.osmdroid.views.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/rounded_background"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/scooter_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Scooter - F 123"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bluetooth, Active"
+            android:textColor="#FFFFFF"
+            android:layout_below="@id/scooter_name"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/battery_percentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="60%"
+            android:textColor="#FFFFFF"
+            android:layout_below="@id/status"
+            android:layout_marginTop="4dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/battery_percentage"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/light_up_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Light it up"
+                android:backgroundTint="#1E1E1E"
+                android:textColor="#FFFFFF"/>
+
+            <Button
+                android:id="@+id/play_sound_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Play Sound"
+                android:backgroundTint="#1E1E1E"
+                android:textColor="#FFFFFF"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/location_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="740 m"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_below="@id/play_sound_button"
+            android:layout_marginTop="16dp"
+            tools:ignore="NotSibling" />
+
+        <TextView
+            android:id="@+id/street_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Beacon Street"
+            android:textColor="#AAAAAA"
+            android:layout_below="@id/location_distance"/>
+
+        <TextView
+            android:id="@+id/travel_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20 min"
+            android:textColor="#AAAAAA"
+            android:layout_below="@id/street_name"/>
+    </RelativeLayout>
+</RelativeLayout>
