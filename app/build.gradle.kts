@@ -45,4 +45,5 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     implementation("org.osmdroid:osmdroid-android:6.1.10")
     implementation("org.osmdroid:osmdroid-mapsforge:6.1.10")
+    implementation("com.airbnb.android:lottie:3.4.0")
 }
